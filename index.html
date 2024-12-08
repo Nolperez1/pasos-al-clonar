@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +13,19 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px 0;
         }
+
         h1 {
             margin: 0;
             font-size: 2rem;
         }
+
         .container {
             max-width: 1200px;
             margin: 20px auto;
@@ -29,22 +33,27 @@
             background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
             color: #333;
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
+
         ol {
             list-style-type: decimal;
             padding-left: 20px;
         }
+
         li {
             margin-bottom: 10px;
         }
+
         .important {
             color: red;
             font-weight: bold;
         }
+
         footer {
             text-align: center;
             padding: 10px 0;
@@ -54,11 +63,29 @@
         }
     </style>
 </head>
+
 <body>
+
     <header>
-        <h1>Pasos Después de Clonar un Proyecto</h1>
+        <h1>Pasos para clonar un proyecto de un repositorio github</h1>
     </header>
-    
+
+    <div class="container">
+        <section>
+            <ol>
+                <h2> Ir a la ubicacion del proyecto donde va clonarse </h2>
+                <li><span style="color: seagreen;">git clone https://github.com/TuUsuario/mi-pagina-web.git
+                    </span> -> ejecutar este comando</li>
+
+                <li style="color: rgb(128, 9, 9);">Esperar que se clone</li>
+            </ol>
+        </section>
+    </div>
+
+    <header>
+        <h1>Pasos Después de Clonar un Proyecto de laravel</h1>
+    </header>
+
     <div class="container">
         <section>
             <h2>1. Instalar Composer</h2>
@@ -82,8 +109,10 @@
         <section>
             <h2>3. Hacer Algunos Ajustes Importantes (Obligatorio)</h2>
             <ol>
-                <li><span class="important">php artisan storage:link</span> → Crea un directorio de archivos en la carpeta Public</li>
-                <li><span class="important">php artisan key:generate</span> → Crea la key única para ese proyecto en APP_KEY=</li>
+                <li><span class="important">php artisan storage:link</span> → Crea un directorio de archivos en la
+                    carpeta Public</li>
+                <li><span class="important">php artisan key:generate</span> → Crea la key única para ese proyecto en
+                    APP_KEY=</li>
                 <li>FILESYSTEM_DISK=local cambiar a PUBLIC</li>
                 <li>DB_DATABASE=nombre definir el nombre de la base de datos</li>
                 <li>Crea un dominio local en Windows (ejecuta el Bloc de Notas como administrador) y Apache</li>
@@ -107,18 +136,68 @@
         </section>
     </div>
 
-    <h3>Pasos para subir un proyecto a github</h3>
-    <ol>
-        <li> <span style="color: seagreen;">git status</span> -> ver el estado del proyecto </li>
-        <li><span style="color: seagreen;">git add .</span> -> agregar todos los archivos</li>
-        <li><span style="color: seagreen;">git commit -m "mensaje"</span>  -> para guardar los cambios</li>
-        <li><span style="color: seagreen;">git push</span> -> para subir el proyecto a github</li>
+    <header>
+        <h1>Pasos para actualizar un proyecto a github</h1>
+    </header>
 
-        <li style="color: rgb(128, 9, 9);">Esperar un tiempo para ver los cambios en github pages</li>
-    </ol>
+    <div class="container">
+        <section>
+            <ol>
+                <li> <span style="color: seagreen;">git status</span> -> ver el estado del proyecto </li>
+                <li><span style="color: seagreen;">git add .</span> -> agregar todos los archivos</li>
+                <li><span style="color: seagreen;">git commit -m "mensaje"</span> -> para guardar los cambios</li>
+                <li><span style="color: seagreen;">git push</span> -> para subir el proyecto a github</li>
+
+                <li style="color: rgb(128, 9, 9);">Esperar un tiempo para ver los cambios en github pages</li>
+            </ol>
+        </section>
+    </div>
+
+    <header>
+        <h1>Pasos para subir un proyecto a un repositorio de github</h1>
+    </header>
+
+    <div class="container">
+
+        <h2>1. Inicializa el repositorio Git en tu proyecto:</h2>
+        <pre><code>git init</code></pre>
+
+        <h2>2. Configura el archivo .gitignore:</h2>
+        <p>Asegúrate de que tu archivo <code>.gitignore</code> contenga lo siguiente para evitar subir archivos
+            innecesarios:</p>
+        <pre><code>/vendor
+/node_modules
+/.env
+/.env.*
+/public/storage
+/storage/*.key
+/public/hot
+/public/build
+/.phpunit.cache
+.DS_Store
+npm-debug.log
+yarn-error.log
+</code></pre>
+
+        <h2>3. Añadir los archivos al repositorio Git:</h2>
+        <pre><code>git add .</code></pre>
+
+        <h2>4. Crear un commit:</h2>
+        <pre><code>git commit -m "Primer commit de mi proyecto Laravel"</code></pre>
+
+        <h2>5. Crear un repositorio en GitHub:</h2>
+        <p>Ve a GitHub y crea un nuevo repositorio (sin inicializarlo con un README).</p>
+
+        <h2>6. Conectar tu repositorio local con GitHub:</h2>
+        <pre><code>git remote add origin https://github.com/usuario/nombre-del-repositorio.git</code></pre>
+
+        <h2>7. Subir el proyecto a GitHub:</h2>
+        <pre><code>git push -u origin main</code></pre>
+    </div>
 
     <footer>
         <p>&copy; 2024 - Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
