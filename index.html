@@ -1,11 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pasos Después de Clonar un Proyecto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .important {
+            color: red;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Pasos Después de Clonar un Proyecto</h1>
+    </header>
+    
+    <div class="container">
+        <section>
+            <h2>1. Instalar Composer</h2>
+            <ol>
+                <li>Composer install</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>2. Instalar Dependencias de Node</h2>
+            <ol>
+                <li>npm install</li>
+                <li>Corregir errores si hubiera en la instalación de npm:</li>
+                <ol>
+                    <li>npm Audit</li>
+                    <li>npm audit fix</li>
+                </ol>
+            </ol>
+        </section>
+
+        <section>
+            <h2>3. Hacer Algunos Ajustes Importantes (Obligatorio)</h2>
+            <ol>
+                <li><span class="important">php artisan storage:link</span> → Crea un directorio de archivos en la carpeta Public</li>
+                <li><span class="important">php artisan key:generate</span> → Crea la key única para ese proyecto en APP_KEY=</li>
+                <li>FILESYSTEM_DISK=local cambiar a PUBLIC</li>
+                <li>DB_DATABASE=nombre definir el nombre de la base de datos</li>
+                <li>Crea un dominio local en Windows (ejecuta el Bloc de Notas como administrador) y Apache</li>
+                <li>Cambiar APP_URL=http://localhost con el nuevo dominio local: APP_URL=http://nuevo.test</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>4. Hacer las Migraciones</h2>
+            <ol>
+                <li>php artisan migrate</li>
+                <li>php artisan db:seed</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>5. Inicializar Proyecto de Esta Manera</h2>
+            <ol>
+                <li>npm run build</li>
+            </ol>
+        </section>
+    </div>
+
     <h3>Pasos para subir un proyecto a github</h3>
     <ol>
         <li> <span style="color: seagreen;">git status</span> -> ver el estado del proyecto </li>
@@ -16,15 +117,8 @@
         <li style="color: rgb(128, 9, 9);">Esperar un tiempo para ver los cambios en github pages</li>
     </ol>
 
-    <h3>Pasos para actualizar un proyecto en github</h3>
-    
-    <ol>
-        <li>Crear un repositorio en github</li>
-        <li>Crear un repositorio en github</li>
-        <li>Crear un repositorio en github</li>
-        <li>Crear un repositorio en github</li>
-        <li>Crear un repositorio en github</li>
-        <li>Crear un repositorio en github</li>
-    </ol>
+    <footer>
+        <p>&copy; 2024 - Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
