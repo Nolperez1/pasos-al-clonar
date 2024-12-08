@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Git hub</div>
+        <button class="navbar-toggle" id="toggle-menu">☰</button>
+        <ul class="navbar-menu" id="menu">
+            <li><a href="index.html">Clonar</a></li>
+            <li><a href="configclone.html">Config clon</a></li>
+            <li><a href="update.html">Actualizar</a></li>
+            <li><a href="upload.html">Subir</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Subir al repositorio</h1>
+            <h2>1. Inicializa el repositorio Git en tu proyecto:</h2>
+            <pre><code>git init</code></pre>
+    
+            <h2>2. Configura el archivo .gitignore:</h2>
+            <p>Asegúrate de que tu archivo <code>.gitignore</code> contenga lo siguiente para evitar subir archivos
+                innecesarios:</p>
+            <pre><code>/vendor
+        /node_modules
+        /.env
+        /.env.*
+        /public/storage
+        /storage/*.key
+        /public/hot
+        /public/build
+        /.phpunit.cache
+        .DS_Store
+        npm-debug.log
+        yarn-error.log
+        </code></pre>
+    
+            <h2>3. Añadir los archivos al repositorio Git:</h2>
+            <pre><code>git add .</code></pre>
+    
+            <h2>4. Crear un commit:</h2>
+            <pre><code>git commit -m "Primer commit de mi proyecto Laravel"</code></pre>
+    
+            <h2>5. Verifica la rama actual: </h2>
+            <p>Confirma cuál es la rama activa en tu repositorio local con:</p>
+            <pre><code style="color:#2a5387">git branch</code> (Opcional) </pre>
+    
+            <p>Si no hay ninguna rama, crea una llamada main (que es la convención actual en GitHub):</p>
+            <pre><code>git branch -M main</code></pre>
+    
+    
+            <h2>6. Crear un repositorio en GitHub:</h2>
+            <p>Ve a GitHub y crea un nuevo repositorio (sin inicializarlo con un README).</p>
+    
+            <h2>7. Conectar tu repositorio local con GitHub:</h2>
+            <pre><code>git remote add origin https://github.com/usuario/nombre-del-repositorio.git</code></pre>
+    
+            <h2>8. Subir el proyecto a GitHub:</h2>
+            <pre><code>git push -u origin main</code></pre>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

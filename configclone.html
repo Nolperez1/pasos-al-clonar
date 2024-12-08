@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Git hub</div>
+        <button class="navbar-toggle" id="toggle-menu">☰</button>
+        <ul class="navbar-menu" id="menu">
+            <li><a href="index.html">Clonar</a></li>
+            <li><a href="configclone.html">Config clon</a></li>
+            <li><a href="update.html">Actualizar</a></li>
+            <li><a href="upload.html">Subir</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Confiracion del clone</h1>
+            <section>
+                <h2>1. Instalar Composer</h2>
+                <ol>
+                    <li>
+                        <pre><code>composer install</code></pre>
+                    </li>
+                </ol>
+            </section>
+    
+            <section>
+                <h2>2. Instalar Dependencias de Node</h2>
+                <ol>
+                    <li>
+                        <pre><code>npm install</code></pre>
+                    </li>
+                    <li>Corregir errores si hubiera en la instalación de npm:</li>
+                    <ol>
+                        <li>
+                            <pre><code>npm audit</code></pre>
+                        </li>
+                        <li>
+                            <pre><code>npm audit fix</code></pre>
+                        </li>
+                    </ol>
+                </ol>
+            </section>
+    
+            <section>
+                <h2>3. Hacer Algunos Ajustes Importantes (Obligatorio)</h2>
+                <ol>
+                    <li><span class="important">
+                            <pre><code>php artisan storage:link</code></pre>
+                        </span> → Crea un directorio de archivos en la carpeta Public</li>
+                    <li><span class="important">
+                            <pre><code>php artisan key:generate</code></pre>
+                        </span> → Crea la key única para ese proyecto en APP_KEY=</li>
+                    <li>FILESYSTEM_DISK=local cambiar a PUBLIC</li>
+                    <li>DB_DATABASE=nombre definir el nombre de la base de datos</li>
+                    <li>Crea un dominio local en Windows (ejecuta el Bloc de Notas como administrador) y Apache</li>
+                    <li>Cambiar APP_URL=http://localhost con el nuevo dominio local:
+                        <pre><code>APP_URL=http://nuevo.test</code></pre>
+                    </li>
+                </ol>
+            </section>
+    
+            <section>
+                <h2>4. Hacer las Migraciones</h2>
+                <ol>
+                    <li>
+                        <pre><code>php artisan migrate</code></pre>
+                    </li>
+                    <li>
+                        <pre><code>php artisan db:seed</code></pre>
+                    </li>
+                </ol>
+            </section>
+    
+            <section>
+                <h2>5. Inicializar Proyecto de Esta Manera</h2>
+                <ol>
+                    <li>
+                        <pre><code>npm run build</code></pre>
+                    </li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
