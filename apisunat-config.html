@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Git hub</div>
+        <button class="navbar-toggle" id="toggle-menu">☰</button>
+        <ul class="navbar-menu" id="menu">
+            <li><a href="index.html">Clonar</a></li>
+            <li><a href="configclone.html">Config clon</a></li>
+            <li><a href="update.html">Actualizar</a></li>
+            <li><a href="upload.html">Subir</a></li>
+            <li><a href="apisunat-config.html">Api sunat</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Confiracion del clone</h1>
+            <section>
+                <h2>1. Habilitar Extensiones en php.ini</h2>
+                <ol>
+                    <li>
+                        <pre>extension=soap</pre>
+                        <pre>extension=openssl</pre>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h2>2. Descargar E Instalar WKHTMLTOPDF</h2>
+                <ol>
+                    <li>
+                        <pre>AQUÍ: <a href="https://wkhtmltopdf.org/downloads.html">CLICK</a></pre>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h2>3. Clonar el repositorio</h2>
+                <ol>
+                    <li>
+                        <pre>AQUÍ: <a href="https://github.com/codersfree/facturacionperu">CLICK</a></pre>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h2>4. Instalar dependencias de composer y npm en el proyecto</h2>
+                <ol>
+                    <li>
+                        <pre><code>composer install</code></pre>
+                        <pre><code>npm install</code></pre>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h2>5. Duplicar el archivo .env</h2>
+            </section>
+            <section>
+                <h2>6. ejecutar las seguientes instrucciones</h2>
+                <ol>
+                    <li>
+                        <pre><code>php artisan key:generate</code></pre>
+                        <pre><code>php artisan storage:link</code></pre>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h2>7. Generar virtual host en apache</h2>
+                <h2>8. Cambiar la url del virtual host</h2>
+                <h2>9. En la variable WKHTMLTOPDF establecer la ruta de la carpeta de wkhtmltopdf</h2>
+                <h2>10. FINALMENTE EJECUTA <pre><code>npm run build</code></pre></h2>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
