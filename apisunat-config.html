@@ -56,7 +56,13 @@
                 <ol>
                     <li>
                         <pre><code>composer install</code></pre>
-                        <pre><code>npm install</code></pre>
+                        <pre><code>npm install (SI no se instala)</code></pre>
+                        <ol>
+                            <li> Ejecutar powershell como administrador</li>
+                            <li> Ejecutar: <code>Get-ExecutionPolicy</code> </li>
+                            <li> Si devuelve: <strong>Restricted</strong> </li>
+                            <li> Ejecutar: <code>Set-ExecutionPolicy RemoteSigned</code> </li>
+                        </ol>
                     </li>
                 </ol>
             </section>
