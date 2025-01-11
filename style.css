@@ -27,7 +27,7 @@ h1 {
 
 h2 {
     color: #333;
-    font-size: 12px;
+    font-size: 12px !important;
     margin-bottom: 10px;
 }
 
