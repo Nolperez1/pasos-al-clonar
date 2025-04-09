@@ -24,15 +24,16 @@
 
     <main>
         <div class="container">
-            <h1>Clonar</h1>
-            <section>
-                <ol>
-                    <h2>Ir a la ubicación del proyecto donde va a clonarse</h2>
-                    <li><span style="color: seagreen;"><code>git clone https://github.com/TuUsuario/mi-pagina-web.git</code>
-                        </span> ==> Ejercutar</li>
-                    <li style="color: rgb(128, 9, 9);">Esperar que se clone</li>
-                </ol>
-            </section>
+            <h1>Actualizar repositorio local desde GitHub</h1>
+            <h2>1. Abre tu terminal o Git Bash en la carpeta de tu proyecto (en tu PC de casa).</h2>
+            <pre><code>git branch</code></pre>
+            <span>Si no estás en la rama main, cambia a ella:</span>
+            <pre><code>git checkout main</code></pre>
+
+            <h2>2. Ahora, trae los últimos cambios desde GitHub:</h2>
+            <pre><code>git pull origin main</code></pre>
+
+            <p>Esto actualizará tu proyecto local con los archivos modificados en la versión más reciente del repositorio en GitHub (o sea, los cambios que hiciste desde el trabajo).</p>
         </div>
     </main>
 
